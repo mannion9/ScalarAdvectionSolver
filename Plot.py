@@ -26,11 +26,12 @@ fig   = plt.figure(1)
 ax1   = fig.add_subplot(1,1,1)
 scat1 = ax1.scatter(r,a[0],facecolors='none',edgecolors='k')
 plt1, = ax1.plot(r,a_true[0])
-
+plt.xlabel('x'),plt.ylabel('a')
 def update(i,fig,ax1):
     scat1.set_offsets([[r[j],a[i][j]] for j in range(len(a[i])-1)])
     plt1.set_data(r,a_true[i])
-    plt.suptitle('%i' % i)
+    plt.xlabel('x'),plt.ylabel('a')
+    plt.suptitle('Time step: %i' % i)
     return ax1
     
 anim = animation.FuncAnimation(fig,update,fargs=(fig,ax1),frames=len(a),interval=100)

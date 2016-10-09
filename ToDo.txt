@@ -1,0 +1,1 @@
+in execution of executable you need to determine if it an a.out of a.exe

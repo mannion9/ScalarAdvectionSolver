@@ -36,6 +36,6 @@ end do
 ! Sine Wave
 !a  = (/(SIN(2*3.14*x(i)),i=imin,imax,1)/)
 ! Gaussian
-!a = (/(EXP(-((x(i)-.5*length)**(2)/(length/100))),i=imin,imax,1)/)
+a = (/(EXP(-((x(i)-.5*length)**(2)/(length/100))),i=imin,imax,1)/)
 end subroutine
 end module

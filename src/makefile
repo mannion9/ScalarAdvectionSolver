@@ -12,4 +12,5 @@ main.o: module_input.mod main.f90
 clean:
 	rm $(objects) module_input.mod 
 	rm Output/*.txt
+	rm a.out
 
