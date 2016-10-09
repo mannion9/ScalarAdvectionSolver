@@ -38,6 +38,12 @@ length   - Length of domain (begining at zero)
 tmax     - Time cut off
 Solver   - Solution method
 
+The Solver can take on values of 
+
+"Godunov" - A first  order peicewise constant  interpolation
+"MUSCL"   - A second order peicewise linear    interpolation (Monotone)
+"PPM"     - A third  order peicewise parabolic interpolation (Monotone)
+
 The program constants are 
 
 jmin     - Array index of left  most real  cell center
