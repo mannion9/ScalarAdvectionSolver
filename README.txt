@@ -3,8 +3,7 @@ The linear advection equation to be solved it.
 
 	a_t + c * a_x = 0
 
-where a subscript indicates a partial derivative, c is the speed of propogation, and a is
-the scalar function a = a(x,t).
+where a subscript indicates a partial derivative, c is the speed of propogation, and a is a scalar function a = a(x,t).
 
 The files contained in this package are
 
@@ -19,16 +18,16 @@ module_input.f90 - Contains all user inputs and paramters
 Output		 - Directory in which data is written to
 makefile	 - Makes source code
 
-The dependencies are
+The code dependencies are
 
-gfortran (or other fortran compiler, specificed in /src/makefile)
+gfortran (or another other fortran compiler to be specificed in /src/makefile)
 python 3.0
 matplotlib
 
-The code is build so that the user should only interact with the module_input.f90 file.
+The code is designed so that the user should only interact with the module_input.f90 file.
 This file contains two sections, the initialization and the initial condition.
 
-The initialization contains two sections. The first is the user inputs and the second is
+The initialization contains two sections. The first is the user inputs and the second are
 program constants, which should never be changed. The user inputs are
 
 N 	 - Number of grid points
@@ -50,6 +49,12 @@ The user inserts the chosen initial conditiion function the subroutine InitCond.
 subroutine has two inputs, a the solution, and r the cell centers. These should not 
 be changed. The user has freedom to define the function as is desired. A series of 
 example initial conditions are contained with the subroutine.
+
+One can plot the results by simply calling
+
+python Plot.py
+
+which will produce an animation.
  
 
  
